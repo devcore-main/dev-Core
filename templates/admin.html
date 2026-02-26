@@ -1,0 +1,22 @@
+<h1>Admin Panel</h1>
+<nav>
+    <a href="#students">Students</a> |
+    <a href="#services">Services</a>
+</nav>
+
+<section id="students">
+    <h2>Students</h2>
+    <input type="text" id="studentName" placeholder="Name">
+    <input type="email" id="studentEmail" placeholder="Email">
+    <button onclick="addStudent()">Add Student</button>
+    <ul id="studentList"></ul>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <input type="text" id="serviceName" placeholder="Service Name">
+    <button onclick="addService()">Add Service</button>
+    <ul id="serviceList"></ul>
+</section>
+
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
