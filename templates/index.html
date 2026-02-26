@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devcore - Cybersecurity Academy</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<nav>
+    <div class="logo">Devcore</div>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        {% if 'user' in session %}
+        <li><a href="{{ url_for('pay') }}">Enroll Now</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        {% else %}
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Learn Cybersecurity & Secure Development Practically</h1>
+    {% if 'user' in session %}
+    <a href="{{ url_for('pay') }}" class="btn">Enroll Now</a>
+    {% else %}
+    <a href="{{ url_for('login') }}" class="btn">Login to Enroll</a>
+    {% endif %}
+</section>
+
+<section class="features">
+    <div class="feature">
+        <h2>Courses</h2>
+        <p>High-quality courses from global sources.</p>
+    </div>
+    <div class="feature">
+        <h2>Security Labs</h2>
+        <p>Hands-on practical labs in pentesting and network security.</p>
+    </div>
+    <div class="feature">
+        <h2>Practical Skills</h2>
+        <p>Learn by doing with real projects and labs.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Devcore. All rights reserved.</p>
+</footer>
+</body>
+</html>
