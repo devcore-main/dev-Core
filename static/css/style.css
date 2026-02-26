@@ -1,0 +1,15 @@
+body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#111;color:#fff;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:#222;}
+nav ul{list-style:none;display:flex;gap:15px;}
+nav ul li a{color:#0ff;text-decoration:none;}
+.hero{text-align:center;padding:100px 20px;}
+.btn{display:inline-block;padding:10px 20px;background:#0ff;color:#111;text-decoration:none;margin-top:20px;}
+section{padding:50px 20px;}
+.features{display:flex;justify-content:space-around;flex-wrap:wrap;}
+.features .feature{width:30%;background:#222;padding:20px;border-radius:10px;margin-bottom:20px;}
+footer{text-align:center;padding:20px;background:#222;}
+input, button{padding:10px;margin:5px 0;}
+button{background:#0ff;border:none;cursor:pointer;}
+li{cursor:pointer;padding:5px;}
+li:hover{background:#333;}
+@media(max-width:768px){.features .feature{width:80%;margin:auto;}}
