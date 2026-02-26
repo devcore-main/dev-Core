@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devcore - Security Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Devcore</div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            {% if 'user' in session %}
+            <li><a href="{{ url_for('pay') }}">Enroll Now</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Our Security Services</h1>
+        <p>We provide practical security solutions for your business and personal projects.</p>
+        {% if 'user' in session %}
+        <a href="{{ url_for('pay') }}" class="btn">Enroll Now</a>
+        {% else %}
+        <a href="{{ url_for('login') }}" class="btn">Login to Enroll</a>
+        {% endif %}
+    </section>
+
+    <!-- Services List (Dynamic from API) -->
+    <section id="servicesContainer" class="features">
+        <!-- Services will be loaded here via main.js -->
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Devcore. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
