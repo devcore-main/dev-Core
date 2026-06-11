@@ -80,19 +80,7 @@ dev-core-website/
 http://your-domain/admin.html
 ```
 
-### Seeded Accounts (all use password: `Dev-Core1234`)
 
-| Role | Email |
-|---|---|
-| **Root** (Full access) | `devcore.communicate@gmail.com` |
-| **Admin** | `admin@dev-core.site` |
-| **Finance Admin** | `financeadmin@dev-core.site` |
-| **Finance** | `finance@dev-core.site` |
-| **Web Admin** | `webadmin@dev-core.site` |
-| **Email Admin** | `emailadmin@dev-core.site` |
-| **Teacher (Zerobyte)** | `zerobyte.teacher@dev-core.site` |
-| **Teacher (Nova)** | `nova.teacher@dev-core.site` |
-| **Teacher (IT)** | `it.teacher@dev-core.site` |
 
 ### RBAC Permissions Matrix
 
